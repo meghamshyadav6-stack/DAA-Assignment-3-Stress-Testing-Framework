@@ -1,0 +1,46 @@
+suite,algorithm,family,theory,sizes,max_ops,max_time_s,risk,model,p_first,p_last,p_mean,erratic,reason
+dp,floyd_warshall,dense,Theta(V^3),20..160,4096000,0.1354,Moderate,"polynomial, exponent ~3.00",3.0,3.0,3.0,False,"high-degree polynomial: fine for hundreds, costly for thousands of items"
+dp,floyd_warshall,sparse(~3 out-edges),Theta(V^3),20..160,4096000,0.22011,Moderate,"polynomial, exponent ~3.00",3.0,3.0,3.0,False,"high-degree polynomial: fine for hundreds, costly for thousands of items"
+dp,matrix_chain,alternating_dims,Theta(n^3),10..200,1333300,0.2019,Moderate,"polynomial, exponent ~3.00",3.01,3.0,3.0,False,"high-degree polynomial: fine for hundreds, costly for thousands of items"
+dp,matrix_chain,random_dims,Theta(n^3),10..200,1333300,0.20023,Moderate,"polynomial, exponent ~3.00",3.01,3.0,3.0,False,"high-degree polynomial: fine for hundreds, costly for thousands of items"
+heaps,binomial_heap,decrease_key_storm,extract O(log n); decrease-key O(log n); merge O(log n),250..8000,101694,0.04552,Low,"polynomial, exponent ~1.15",1.18,1.12,1.15,False,growth matches the expected low-degree trend
+heaps,binomial_heap,insert_then_extract_all,extract O(log n); decrease-key O(log n); merge O(log n),250..8000,323852,0.16025,Low,"polynomial, exponent ~1.16",1.19,1.13,1.16,False,growth matches the expected low-degree trend
+heaps,binomial_heap,merge_chain,extract O(log n); decrease-key O(log n); merge O(log n),250..8000,6978,0.00644,Low,"polynomial, exponent ~1.03",1.07,1.0,1.03,False,growth matches the expected low-degree trend
+heaps,fibonacci_heap,decrease_key_storm,decrease-key O(1)* ; merge O(1); extract O(log n)* (*amortized),250..8000,33964,0.01609,Low,"polynomial, exponent ~1.01",1.01,1.0,1.01,False,growth matches the expected low-degree trend
+heaps,fibonacci_heap,insert_then_extract_all,decrease-key O(1)* ; merge O(1); extract O(log n)* (*amortized),250..8000,578009,0.14993,Moderate,"polynomial, exponent ~1.17 but latency spikes",1.21,1.14,1.17,False,a single operation costs 664x the average (amortized bound hides worst-case latency)
+heaps,fibonacci_heap,merge_chain,decrease-key O(1)* ; merge O(1); extract O(log n)* (*amortized),250..8000,1998,0.00093,Low,"polynomial, exponent ~1.01",1.02,1.0,1.01,False,growth matches the expected low-degree trend
+knapsack,fractional_knapsack,capacity_stress(n=100),O(n log n),1000..32000,559,0.0002,Low,"polynomial, exponent ~0.00",0.0,0.0,0.0,False,growth matches the expected low-degree trend
+knapsack,fractional_knapsack,item_stress(W=1000),O(n log n),50..1600,15013,0.00406,Low,"polynomial, exponent ~1.20",1.24,1.16,1.2,False,growth matches the expected low-degree trend
+knapsack,knapsack_01_dp,capacity_stress(n=100),O(nW) pseudo-polynomial,1000..32000,2867386,0.30059,Moderate,polynomial in numeric value (exponent ~1.00),1.0,1.0,1.0,False,"cost scales with the numeric capacity W, i.e. exponentially in its bit-length"
+knapsack,knapsack_01_dp,item_stress(W=1000),O(nW) pseudo-polynomial,50..1600,1440191,0.11627,Low,"polynomial, exponent ~1.00",1.01,1.0,1.0,False,growth matches the expected low-degree trend
+mst,kruskal,decrease_key_adversary,O(E log E),50..300,276170,0.0211,Low,"polynomial, exponent ~1.91",1.81,1.98,1.91,False,growth matches the expected low-degree trend
+mst,kruskal,dense_E=0.8*Vmax,O(E log E),50..400,1004832,0.0346,Low,"polynomial, exponent ~2.22",2.26,2.19,2.22,False,growth matches the expected low-degree trend
+mst,kruskal,sparse_E=2V,O(E log E),100..1600,48004,0.00238,Low,"polynomial, exponent ~1.12",1.15,1.1,1.12,False,growth matches the expected low-degree trend
+mst,prim_fibonacci,decrease_key_adversary,O(E + V log V),50..300,184711,0.03673,Low,"polynomial, exponent ~1.96",1.93,1.97,1.96,False,growth matches the expected low-degree trend
+mst,prim_fibonacci,dense_E=0.8*Vmax,O(E + V log V),50..400,152358,0.17639,Low,"polynomial, exponent ~1.80",1.76,1.88,1.8,False,growth matches the expected low-degree trend
+mst,prim_fibonacci,sparse_E=2V,O(E + V log V),100..1600,83190,0.02679,Low,"polynomial, exponent ~1.12",1.13,1.11,1.12,False,growth matches the expected low-degree trend
+mst,prim_matrix,decrease_key_adversary,O(V^2),50..300,270000,0.00798,Low,"polynomial, exponent ~2.00",2.0,2.0,2.0,False,growth matches the expected low-degree trend
+mst,prim_matrix,dense_E=0.8*Vmax,O(V^2),50..400,480000,0.02303,Low,"polynomial, exponent ~2.00",2.0,2.0,2.0,False,growth matches the expected low-degree trend
+mst,prim_matrix,sparse_E=2V,O(V^2),100..1600,7680000,0.28892,Low,"polynomial, exponent ~2.00",2.0,2.0,2.0,False,growth matches the expected low-degree trend
+search,hamiltonian_backtracking,clique_pendant,O(n!) worst case,4..12,1500001,1.20338,High,super-polynomial / budget exhausted,4.92,3.61,12.28,False,state budget exhausted - exact search impractical beyond tested size
+search,hamiltonian_backtracking,complete,O(n!) worst case,4..12,12,0.0007,Low,"polynomial, exponent ~1.00",1.0,1.0,1.0,False,growth matches the expected low-degree trend
+search,hamiltonian_backtracking,sparse_random,O(n!) worst case,4..12,441,0.00021,Low,"polynomial, exponent ~5.27",3.11,-1.87,5.27,False,growth matches the expected low-degree trend
+search,n_queens,all_solutions,O(n!) worst case,4..12,856189,1.76679,High,super-polynomial / budget exhausted,5.18,18.79,11.22,False,local growth exponent climbs 5.2 -> 18.8 (not a fixed polynomial)
+search,n_queens,first_solution,O(n!) worst case,4..24,411609,4.74745,Moderate,irregular / instance dependent,-1.82,65.42,8.11,True,"cost is not monotone in size - heavy-tailed, depends on instance luck"
+search,tsp_backtracking,euclidean,Theta((n-1)!),4..11,1200001,0.50287,High,super-polynomial / budget exhausted,6.28,2.06,11.7,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_backtracking,flat,Theta((n-1)!),4..11,1200001,0.52946,High,super-polynomial / budget exhausted,6.28,2.06,11.7,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_backtracking,uniform,Theta((n-1)!),4..11,1200001,0.51161,High,super-polynomial / budget exhausted,6.28,2.06,11.7,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_backtracking_pruned,euclidean,O(n!) worst case,4..12,1200001,1.03496,High,super-polynomial / budget exhausted,5.82,26.21,11.54,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_backtracking_pruned,flat,O(n!) worst case,4..12,1200001,0.58469,High,super-polynomial / budget exhausted,6.28,0.0,10.24,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_backtracking_pruned,uniform,O(n!) worst case,4..12,250011,0.20017,High,super-polynomial / budget exhausted,5.66,19.05,10.02,False,local growth exponent climbs 5.7 -> 19.1 (not a fixed polynomial)
+search,tsp_branch_and_bound,euclidean,"O(n!) worst case, usually far less",4..13,60001,0.82015,High,super-polynomial / budget exhausted,3.75,10.95,7.98,False,state budget exhausted - exact search impractical beyond tested size
+search,tsp_branch_and_bound,flat,"O(n!) worst case, usually far less",4..14,381,0.02363,Moderate,irregular / instance dependent,0.64,-23.55,2.14,True,"cost is not monotone in size - heavy-tailed, depends on instance luck"
+search,tsp_branch_and_bound,uniform,"O(n!) worst case, usually far less",4..13,60001,0.87497,High,super-polynomial / budget exhausted,2.11,23.32,8.35,False,state budget exhausted - exact search impractical beyond tested size
+trees,b_tree,ascending_insert+search,O(log_t n) node accesses per op,1000..32000,768610,0.32372,Low,"polynomial, exponent ~1.12",1.11,1.09,1.12,False,growth matches the expected low-degree trend
+trees,b_tree,descending_insert+search,O(log_t n) node accesses per op,1000..32000,1949358,0.26967,Low,"polynomial, exponent ~1.13",1.12,1.1,1.13,False,growth matches the expected low-degree trend
+trees,b_tree,random_insert+search,O(log_t n) node accesses per op,1000..32000,1343277,0.3092,Low,"polynomial, exponent ~1.14",1.16,1.09,1.14,False,growth matches the expected low-degree trend
+trees,b_tree,zigzag_insert+search,O(log_t n) node accesses per op,1000..32000,1597180,0.3843,Low,"polynomial, exponent ~1.13",1.15,1.1,1.13,False,growth matches the expected low-degree trend
+trees,red_black_tree,ascending_insert+search,"O(log n) per op, height <= 2log2(n+1)",1000..32000,1236662,0.21815,Low,"polynomial, exponent ~1.12",1.14,1.1,1.12,False,growth matches the expected low-degree trend
+trees,red_black_tree,descending_insert+search,"O(log n) per op, height <= 2log2(n+1)",1000..32000,1236589,0.19042,Low,"polynomial, exponent ~1.12",1.14,1.1,1.12,False,growth matches the expected low-degree trend
+trees,red_black_tree,random_insert+search,"O(log n) per op, height <= 2log2(n+1)",1000..32000,769964,0.13064,Low,"polynomial, exponent ~1.11",1.11,1.09,1.11,False,growth matches the expected low-degree trend
+trees,red_black_tree,zigzag_insert+search,"O(log n) per op, height <= 2log2(n+1)",1000..32000,1220672,0.23664,Low,"polynomial, exponent ~1.12",1.14,1.1,1.12,False,growth matches the expected low-degree trend

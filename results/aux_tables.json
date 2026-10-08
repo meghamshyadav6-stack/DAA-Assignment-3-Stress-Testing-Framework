@@ -1,0 +1,356 @@
+{
+ "btree_degree_sweep": [
+  {
+   "t": 2,
+   "order": "random",
+   "height": 11,
+   "splits": 9100,
+   "utilization": 0.585,
+   "nodes": 9111
+  },
+  {
+   "t": 2,
+   "order": "ascending",
+   "height": 13,
+   "splits": 15975,
+   "utilization": 0.334,
+   "nodes": 15988
+  },
+  {
+   "t": 3,
+   "order": "random",
+   "height": 7,
+   "splits": 4976,
+   "utilization": 0.642,
+   "nodes": 4983
+  },
+  {
+   "t": 3,
+   "order": "ascending",
+   "height": 9,
+   "splits": 7986,
+   "utilization": 0.4,
+   "nodes": 7995
+  },
+  {
+   "t": 4,
+   "order": "random",
+   "height": 6,
+   "splits": 3470,
+   "utilization": 0.658,
+   "nodes": 3476
+  },
+  {
+   "t": 4,
+   "order": "ascending",
+   "height": 7,
+   "splits": 5322,
+   "utilization": 0.429,
+   "nodes": 5329
+  },
+  {
+   "t": 8,
+   "order": "random",
+   "height": 4,
+   "splits": 1584,
+   "utilization": 0.672,
+   "nodes": 1588
+  },
+  {
+   "t": 8,
+   "order": "ascending",
+   "height": 5,
+   "splits": 2279,
+   "utilization": 0.467,
+   "nodes": 2284
+  },
+  {
+   "t": 16,
+   "order": "random",
+   "height": 4,
+   "splits": 750,
+   "utilization": 0.685,
+   "nodes": 754
+  },
+  {
+   "t": 16,
+   "order": "ascending",
+   "height": 4,
+   "splits": 1062,
+   "utilization": 0.484,
+   "nodes": 1066
+  },
+  {
+   "t": 32,
+   "order": "random",
+   "height": 3,
+   "splits": 374,
+   "utilization": 0.674,
+   "nodes": 377
+  },
+  {
+   "t": 32,
+   "order": "ascending",
+   "height": 3,
+   "splits": 513,
+   "utilization": 0.492,
+   "nodes": 516
+  },
+  {
+   "t": 64,
+   "order": "random",
+   "height": 3,
+   "splits": 183,
+   "utilization": 0.677,
+   "nodes": 186
+  },
+  {
+   "t": 64,
+   "order": "ascending",
+   "height": 3,
+   "splits": 251,
+   "utilization": 0.496,
+   "nodes": 254
+  }
+ ],
+ "tree_height_check": [
+  {
+   "n": 1000,
+   "order": "ascending",
+   "rb_height": 17,
+   "bound_2log2": 19.9,
+   "log2n": 10.0
+  },
+  {
+   "n": 1000,
+   "order": "random",
+   "rb_height": 12,
+   "bound_2log2": 19.9,
+   "log2n": 10.0
+  },
+  {
+   "n": 8000,
+   "order": "ascending",
+   "rb_height": 23,
+   "bound_2log2": 25.9,
+   "log2n": 13.0
+  },
+  {
+   "n": 8000,
+   "order": "random",
+   "rb_height": 16,
+   "bound_2log2": 25.9,
+   "log2n": 13.0
+  },
+  {
+   "n": 32000,
+   "order": "ascending",
+   "rb_height": 27,
+   "bound_2log2": 29.9,
+   "log2n": 15.0
+  },
+  {
+   "n": 32000,
+   "order": "random",
+   "rb_height": 18,
+   "bound_2log2": 29.9,
+   "log2n": 15.0
+  }
+ ],
+ "knapsack_quality": [
+  {
+   "dataset": "random",
+   "n": 30,
+   "W": 100,
+   "fractional": 168.6,
+   "dp_01": 166,
+   "greedy_01": 164,
+   "greedy_gap_pct": 1.2,
+   "frac_minus_01": 2.6
+  },
+  {
+   "dataset": "random",
+   "n": 30,
+   "W": 1000,
+   "fractional": 2386.5,
+   "dp_01": 2363,
+   "greedy_01": 2363,
+   "greedy_gap_pct": 0.0,
+   "frac_minus_01": 23.5
+  },
+  {
+   "dataset": "random",
+   "n": 30,
+   "W": 10000,
+   "fractional": 18796.3,
+   "dp_01": 18642,
+   "greedy_01": 18456,
+   "greedy_gap_pct": 1.0,
+   "frac_minus_01": 154.3
+  },
+  {
+   "dataset": "correlated",
+   "n": 30,
+   "W": 100,
+   "fractional": 130.9,
+   "dp_01": 130,
+   "greedy_01": 124,
+   "greedy_gap_pct": 4.6,
+   "frac_minus_01": 0.9
+  },
+  {
+   "dataset": "correlated",
+   "n": 30,
+   "W": 1000,
+   "fractional": 1304.9,
+   "dp_01": 1299,
+   "greedy_01": 1270,
+   "greedy_gap_pct": 2.2,
+   "frac_minus_01": 5.9
+  },
+  {
+   "dataset": "correlated",
+   "n": 30,
+   "W": 10000,
+   "fractional": 13146.4,
+   "dp_01": 13000,
+   "greedy_01": 12184,
+   "greedy_gap_pct": 6.3,
+   "frac_minus_01": 146.4
+  },
+  {
+   "dataset": "ratio_trap",
+   "n": 30,
+   "W": 100,
+   "fractional": 101.0,
+   "dp_01": 100,
+   "greedy_01": 16,
+   "greedy_gap_pct": 84.0,
+   "frac_minus_01": 1.0
+  },
+  {
+   "dataset": "ratio_trap",
+   "n": 30,
+   "W": 1000,
+   "fractional": 1001.0,
+   "dp_01": 1000,
+   "greedy_01": 16,
+   "greedy_gap_pct": 98.4,
+   "frac_minus_01": 1.0
+  },
+  {
+   "dataset": "ratio_trap",
+   "n": 30,
+   "W": 10000,
+   "fractional": 10001.0,
+   "dp_01": 10000,
+   "greedy_01": 16,
+   "greedy_gap_pct": 99.8,
+   "frac_minus_01": 1.0
+  }
+ ],
+ "knapsack_capacity": [
+  {
+   "W": 100,
+   "bits": 7,
+   "dp_cell_updates": 3647,
+   "seconds": 0.0002
+  },
+  {
+   "W": 1000,
+   "bits": 10,
+   "dp_cell_updates": 39647,
+   "seconds": 0.0031
+  },
+  {
+   "W": 10000,
+   "bits": 14,
+   "dp_cell_updates": 399647,
+   "seconds": 0.0343
+  },
+  {
+   "W": 100000,
+   "bits": 17,
+   "dp_cell_updates": 3999647,
+   "seconds": 0.338
+  },
+  {
+   "W": 1000000,
+   "bits": 20,
+   "dp_cell_updates": 39999647,
+   "seconds": 3.7129
+  }
+ ],
+ "mcm_order_benefit": [
+  {
+   "dims": "random",
+   "matrices": 10,
+   "optimal_mults": 177666,
+   "left_to_right_mults": 1770522,
+   "reduction_factor": 9.97
+  },
+  {
+   "dims": "random",
+   "matrices": 20,
+   "optimal_mults": 470648,
+   "left_to_right_mults": 4369074,
+   "reduction_factor": 9.28
+  },
+  {
+   "dims": "random",
+   "matrices": 40,
+   "optimal_mults": 944083,
+   "left_to_right_mults": 6804000,
+   "reduction_factor": 7.21
+  },
+  {
+   "dims": "random",
+   "matrices": 80,
+   "optimal_mults": 961555,
+   "left_to_right_mults": 7439952,
+   "reduction_factor": 7.74
+  },
+  {
+   "dims": "random",
+   "matrices": 160,
+   "optimal_mults": 2339035,
+   "left_to_right_mults": 9322540,
+   "reduction_factor": 3.99
+  },
+  {
+   "dims": "alternating",
+   "matrices": 10,
+   "optimal_mults": 10503000,
+   "left_to_right_mults": 90000000,
+   "reduction_factor": 8.57
+  },
+  {
+   "dims": "alternating",
+   "matrices": 20,
+   "optimal_mults": 11008000,
+   "left_to_right_mults": 190000000,
+   "reduction_factor": 17.26
+  },
+  {
+   "dims": "alternating",
+   "matrices": 40,
+   "optimal_mults": 12018000,
+   "left_to_right_mults": 390000000,
+   "reduction_factor": 32.45
+  },
+  {
+   "dims": "alternating",
+   "matrices": 80,
+   "optimal_mults": 14038000,
+   "left_to_right_mults": 790000000,
+   "reduction_factor": 56.28
+  },
+  {
+   "dims": "alternating",
+   "matrices": 160,
+   "optimal_mults": 18078000,
+   "left_to_right_mults": 1590000000,
+   "reduction_factor": 87.95
+  }
+ ]
+}
